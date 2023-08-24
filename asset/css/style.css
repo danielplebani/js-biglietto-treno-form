@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*main*/
+main{
+    background-color: #b91450;
+    height: 100vh;
+}
+
+#container_1{
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    color: #b91450;
+    padding: 2rem 0;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px black;
+}
+
+#container_1 > .row{
+    display: flex;
+}
+
+#container_1  .col{
+    width: 33%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#name_dati , #km_dati, #eta_dati{
+    padding: 5px 0;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 1rem;
+    border: 2px solid #b91450;
+    border-radius: 10px;
+}
+
+#container_1 button{
+    padding: 10px;
+    color: #b91450;
+    font-size: large;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.355);
+}
+
+#container_2 > .container{
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    color: black;
+    padding: 1.5rem ;
+}
+
+#container_2 > .container > .row{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+#container_2 > .container > .row > .col{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}

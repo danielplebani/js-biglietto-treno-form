@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>train ticket</title>
+
+    <link rel="stylesheet" href="./asset/css/style.css">
+  </head>
+  <body>
+
+    <main>
+
+      <h1 style="text-align: center; padding: 1rem; color: white;">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+
+      <div id="container_1">
+        <div class="row">
+          <div class="col">
+            <span>Nome e cognome</span> 
+            <input id="name_dati" type="text" placeholder="nome e cognome">
+          </div>
+  
+          <div class="col">
+            <span>Km da percorrere</span>
+            <input id="km_dati" type="text" placeholder="km da percorrere">
+          </div>
+  
+          <div class="col">
+            <span>Fascia d'età</span>
+            <form>
+              <select id="eta_dati">
+                <option value="javascript">Maggiorenne</option>
+                <option value="php">Minorenne</option>
+                <option value="java">Over 65</option>
+              </select>
+            </form>
+          </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center; justify-content: center;" class="row">
+          <button style="margin-right: 7px; border-color: orange;">Genera</button>
+          <button style="margin-left: 7px;">Annulla</button>
+        </div>
+      </div>
+
+
+      <div style="margin-top: 1rem; display: none;" id="container_2">
+        <h1 style="text-align: center; padding: 1rem; color: white;">IL TUO BIGLIETTO</h1>
+
+        <div class="container">
+          <h2><strong>DETTAGLIO PASSEGGERI</strong></h2>
+
+          <div class="row">
+            <div style="background-color: grey;" class="col">
+              <h2>NOME PASSEGGERO</h2>
+              <span style="font-size: x-large; margin-top: 3px;"></span>
+            </div>
+
+            <div class="col">
+              <span><strong>Offerta</strong></span>
+              <span style="margin-top: 4rem;"></span>
+            </div>
+
+            <div class="col">
+              <span><strong>Carrozza</strong></span>
+              <span style="margin-top: 4rem;"></span>
+            </div>
+
+            <div class="col">
+              <span><strong>Codice CP</strong></span>
+              <span style="margin-top: 4rem;"></span>
+            </div>
+
+            <div class="col">
+              <span><strong>Costo biglietto</strong></span>
+              <span style="margin-top: 4rem;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <script src=".asset/js/main.js"></script>
+  </body>
+</html>
