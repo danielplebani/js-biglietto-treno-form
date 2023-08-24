@@ -1,39 +1,49 @@
-/*
-Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero.
-Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
---il prezzo del biglietto è definito in base ai km (0.21 € al km)
---va applicato uno sconto del 20% per i minorenni
---va applicato uno sconto del 40% per gli over 65.
-L'output del prezzo finale va stampato in forma umana (ovvero con massimo due decimali, per indicare i centesimi sul prezzo).
-*/
+//cliccando il pulsante genera appare il biglietto 
+const genera = document.querySelector('.genera').addEventListener('click', function (e) {
+    document.getElementById("container_2").style.display = 'block';
 
-//chiede il numero di km che vuole percorrere,lo trasforma in numero e non può essere 0
-const kilometers = Number(prompt('quanti kilometri vuoi percorerre'));
-console.log("l'utente vuole percorrere " + kilometers + " km");
-if (kilometers == 0){
-    alert("ops! c'è un errore,fammi fare un po di strada😁")
-}
+    //inserendo il nome  nell'input,il value verrà inserito nel biglietto
+    const username = document.getElementById('name_dati').value
+    document.getElementById('name').innerHTML = username;
 
-//chiede l'età del passeggero e la trasforma in un numero
-const age = Number(prompt('quanti anni hai'));
-console.log("Quanti hanni hai? " + age);
-if (age == 0){
-    alert("ops! c'è un errore,devi avere almeno qualche mese😁")
-}
+    //inserendo il numero di km  nell'input,il value verrà inserito nel biglietto
+    const km = Number(document.getElementById('km_dati').value);
+    if (km == 0){
+        alert("ops! c'è un errore,fammi fare un po di strada😁")
+    }
 
-//calcolo il prezzo del biglietto 
-if (age >= 18 && age < 65){
-    const price = (kilometers * 0.21)
-    console.log('il prezzo del biglietto sarà: '+ price + '€');
-    document.getElementById('prezzo').innerHTML = (Math.round((price + Number.EPSILON) * 100) / 100) + '€';
-} else if (age < 18){
-    const discounted20 = ((kilometers * 0.21) *20 /100);
-    const price = ((kilometers * 0.21)- discounted20);
-    console.log('il prezzo del biglietto sarà: '+ price + '€');
-    document.getElementById('prezzo').innerHTML = (Math.round((price + Number.EPSILON) * 100) / 100) + '€';
-} else{
-    const discounted40 = ((kilometers * 0.21) *40 /100);
-    const price = ((kilometers * 0.21)- discounted40);
-    console.log('il prezzo del biglietto sarà: '+ price + '€');
-    document.getElementById('prezzo').innerHTML = (Math.round((price + Number.EPSILON) * 100) / 100) + '€';
-}
+    //offerta del biglietto,se ci sono sconti
+    if (document.getElementById('eta_dati').value === 'maggiorenne') {
+        const offerta = 'Biglietto standard'
+        document.getElementById('offerta').innerHTML = offerta;
+    } else if (document.getElementById('eta_dati').value === 'minorenne') {
+        const offerta = 'Biglietto con il 20% di sconto'
+        document.getElementById('offerta').innerHTML = offerta;
+    } else{
+        const offerta = 'Biglietto con il 40% di sconto'
+        document.getElementById('offerta').innerHTML = offerta;
+    }
+
+    //il numero della carrozza l'ho fatto casuale
+    const carrozza = Math.random() * 10;
+    document.getElementById('carrozza').innerHTML = Math. trunc(carrozza);
+
+    //il codiceCP l'ho fatto casuale
+    const codiceCP = (Math.random() * 100000);
+    document.getElementById('codiceCP').innerHTML = Math. trunc(codiceCP);
+
+    //il prezzo varia in base agli sconti
+    if (document.getElementById('eta_dati').value === 'maggiorenne') {
+        const price = (km * 0.21);
+        document.getElementById('costo_biglietto').innerHTML = (Math.round((price + Number.EPSILON) * 100) / 100) + '€';
+    } else if (document.getElementById('eta_dati').value === 'minorenne') {
+        const discounted20 = ((km * 0.21) *20 /100);
+        const price = ((km * 0.21)- discounted20);
+        document.getElementById('costo_biglietto').innerHTML = (Math.round((price + Number.EPSILON) * 100) / 100) + '€';
+    } else{
+        const discounted40 = ((km * 0.21) *40 /100);
+        const price = ((km * 0.21)- discounted40);
+        document.getElementById('costo_biglietto').innerHTML = (Math.round((price + Number.EPSILON) * 100) / 100) + '€';
+    }
+
+})

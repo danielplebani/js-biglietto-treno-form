@@ -29,16 +29,16 @@
             <span>Fascia d'età</span>
             <form>
               <select id="eta_dati">
-                <option value="javascript">Maggiorenne</option>
-                <option value="php">Minorenne</option>
-                <option value="java">Over 65</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="minorenne">Minorenne</option>
+                <option value="over65">Over 65</option>
               </select>
             </form>
           </div>
         </div>
 
         <div style="margin-top: 3rem; text-align: center; justify-content: center;" class="row">
-          <button style="margin-right: 7px; border-color: orange;">Genera</button>
+          <button class="genera" style="margin-right: 7px; border-color: orange;">Genera</button>
           <button style="margin-left: 7px;">Annulla</button>
         </div>
       </div>
@@ -53,27 +53,27 @@
           <div class="row">
             <div style="background-color: grey;" class="col">
               <h2>NOME PASSEGGERO</h2>
-              <span style="font-size: x-large; margin-top: 3px;"></span>
+              <span id="name" style="font-size: x-large; margin-top: 3px;"></span>
             </div>
 
             <div class="col">
               <span><strong>Offerta</strong></span>
-              <span style="margin-top: 4rem;"></span>
+              <span id="offerta" style="margin-top: 4rem;"></span>
             </div>
 
             <div class="col">
               <span><strong>Carrozza</strong></span>
-              <span style="margin-top: 4rem;"></span>
+              <span id="carrozza" style="margin-top: 4rem; "></span>
             </div>
 
             <div class="col">
               <span><strong>Codice CP</strong></span>
-              <span style="margin-top: 4rem;"></span>
+              <span id="codiceCP" style="margin-top: 4rem;"></span>
             </div>
 
             <div class="col">
               <span><strong>Costo biglietto</strong></span>
-              <span style="margin-top: 4rem;"></span>
+              <span id="costo_biglietto" style="margin-top: 4rem;"></span>
             </div>
           </div>
         </div>
@@ -81,6 +81,6 @@
 
     </main>
 
-    <script src=".asset/js/main.js"></script>
+    <script src="./asset/js/main.js"></script>
   </body>
 </html>
